@@ -125,10 +125,7 @@ public final class LibraryLoader {
 
     private static File getLibFolder() {
         File pluginDataFolder = LoaderUtils.getPlugin().getDataFolder();
-        File pluginsDir = pluginDataFolder.getParentFile();
-
-        File helperDir = new File(pluginsDir, "helper");
-        File libs = new File(helperDir, "libraries");
+        File libs = new File(pluginDataFolder, "libraries");
         libs.mkdirs();
         return libs;
     }
