@@ -99,16 +99,16 @@ public class PaginatedGuiBuilder {
         return new PaginatedGuiBuilder();
     }
 
-    private int lines;
-    private String title;
-    private List<Integer> itemSlots;
-    private int nextPageSlot;
-    private int previousPageSlot;
-    private MenuScheme scheme;
-    private Function<PageInfo, ItemStack> nextPageItem;
-    private Function<PageInfo, ItemStack> previousPageItem;
+    protected int lines;
+    protected String title;
+    protected List<Integer> itemSlots;
+    protected int nextPageSlot;
+    protected int previousPageSlot;
+    protected MenuScheme scheme;
+    protected Function<PageInfo, ItemStack> nextPageItem;
+    protected Function<PageInfo, ItemStack> previousPageItem;
 
-    private PaginatedGuiBuilder() {
+    protected PaginatedGuiBuilder() {
         this.lines = DEFAULT_LINES;
         this.itemSlots = DEFAULT_ITEM_SLOTS;
         this.nextPageSlot = DEFAULT_NEXT_PAGE_SLOT;

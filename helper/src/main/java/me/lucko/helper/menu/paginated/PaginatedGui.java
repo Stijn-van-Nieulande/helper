@@ -48,18 +48,18 @@ import java.util.function.Function;
 @NonnullByDefault
 public class PaginatedGui extends Gui {
 
-    private final MenuScheme scheme;
-    private final List<Integer> itemSlots;
+    protected final MenuScheme scheme;
+    protected final List<Integer> itemSlots;
 
-    private final int nextPageSlot;
-    private final int previousPageSlot;
-    private final Function<PageInfo, ItemStack> nextPageItem;
-    private final Function<PageInfo, ItemStack> previousPageItem;
+    protected final int nextPageSlot;
+    protected final int previousPageSlot;
+    protected final Function<PageInfo, ItemStack> nextPageItem;
+    protected final Function<PageInfo, ItemStack> previousPageItem;
 
-    private List<Item> content;
+    protected List<Item> content;
 
     // starts at 1
-    private int page;
+    protected int page;
 
     public PaginatedGui(Function<PaginatedGui, List<Item>> content, Player player, PaginatedGuiBuilder model) {
         super(player, model.getLines(), model.getTitle());
